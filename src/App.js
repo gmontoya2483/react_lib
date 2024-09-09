@@ -1,44 +1,30 @@
-import Button from "./Button";
-import { GoBell, GoCloudDownload, GoDatabase } from 'react-icons/go'
+import Button from "./components/Button";
+import Accordion from "./components/Accordion";
+
+
 
 function App () {
 
-    const handleClick = () => {
-        console.log('Click!!!');
-    };
+    const items = [
+        {   id: 'asd111',
+            label: 'Can I use React on a project?',
+            content: 'You can use React on any project you want.'
+        },
+        {
+            id: 'asd112',
+            label: 'Can I use Javascript on a project?',
+            content: 'You can use JavaScript on any project you want.'
+        },
+        {
+            id: 'asd113',
+            label: 'Can I use CSS on a project?',
+            content: 'You can use CSS on any project you want.'
+        }
+    ]
 
-    const handleEnter = () => {
-        console.log('Enter!!!');
-    };
+    return <Accordion items={items}/>
 
-    const handleLeave = () => {
-        console.log('Leave!!!');
-    };
 
-    return <div>
-        <div><Button className="mb-5" onClick={handleClick}>Plain!</Button></div>
-        <div><Button success rounded outline onClick={handleClick}>
-            <GoBell />
-            Click me!
-        </Button>
-        </div>
-        <div>
-            <Button danger outline onMouseEnter={handleEnter}>
-                <GoCloudDownload />
-                Buy Now!
-            </Button>
-        </div>
-        <div>
-            <Button warning onMouseLeave={handleLeave}>
-                <GoDatabase />
-                See Deal!
-            </Button>
-        </div>
-        <div><Button warning outline>See Deal!</Button></div>
-        <div><Button secondary rounded>Hide Ads!</Button></div>
-        <div><Button primary outline>Something!</Button></div>
-        <div><Button secondary outline>Something!</Button></div>
-    </div>
 }
 
 export default App
