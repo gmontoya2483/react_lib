@@ -18,9 +18,7 @@ function Accordion({ items }) {
             } else {
                 return index;
             }
-        })+8
-        orr
-
+        })
     }
 
     const renderedItems = items.map((item, index) => {
