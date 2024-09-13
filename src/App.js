@@ -7,6 +7,7 @@ import SideBar from "./components/SideBar";
 import ButtonPage from "./pages/ButtonPage";
 import ModalPage from "./pages/ModalPage";
 import TablePage from "./pages/TablePage";
+import CounterPage from "./pages/CounterPage";
 
 
 function App () {
@@ -31,6 +32,9 @@ function App () {
             </Route>
             <Route path='/table'>
                 <TablePage />
+            </Route>
+            <Route path='/counter'>
+                <CounterPage initialCount={0} />
             </Route>
         </div>
     </div>
